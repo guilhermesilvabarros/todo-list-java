@@ -1,4 +1,4 @@
-package br.com.guilhermebarros.todolist.users;
+package br.com.guilhermebarros.todolist.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Data
 @Entity(name = "tb_users")
-public class UserModel {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
