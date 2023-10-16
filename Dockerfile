@@ -1,11 +1,7 @@
-FROM ubuntu:latest AS build
-
-RUN apt update
-RUN apt install openjdk-17-jdk -y
+FROM bitnami/java AS build
 
 COPY . .
 
-RUN apt install maven -y
 RUN mvn clean install
 
 EXPOSE 8080
